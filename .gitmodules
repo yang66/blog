@@ -1,0 +1,4 @@
+[submodule "themes/yilia"]
+	path = themes/yilia
+	url = https://github.com/yang66/hexo-theme-yilia.git
+	branch = blog
