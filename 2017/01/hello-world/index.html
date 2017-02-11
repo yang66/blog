@@ -309,7 +309,7 @@ Quick">
 		open_in_new: false,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -366,6 +366,18 @@ Quick">
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">jvm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">netty</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
