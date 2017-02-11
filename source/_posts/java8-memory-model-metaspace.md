@@ -2,6 +2,8 @@
 title: java8内存模型——元空间（Metaspace）
 date: 2017-02-09 00:00:32
 tags:
+- java
+- jvm
 ---
 ## JVM内存模型
 
