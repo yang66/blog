@@ -23,7 +23,7 @@
 <meta property="og:image" content="http://yang66.win/oom-jdk7.png">
 <meta property="og:image" content="http://yang66.win/oom-jdk8.png">
 <meta property="og:image" content="http://yang66.win/oom-jdk8-2.png">
-<meta property="og:updated_time" content="2017-02-09T15:52:06.000Z">
+<meta property="og:updated_time" content="2017-02-11T09:53:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java8内存模型——元空间（Metaspace）">
 <meta name="twitter:description" content="JVM内存模型根据 JVM 规范，JVM 内存共分为虚拟机栈、堆、方法区、程序计数器、本地方法栈五个部分。
@@ -188,7 +188,7 @@
       
         <h2 id="JVM内存模型"><a href="#JVM内存模型" class="headerlink" title="JVM内存模型"></a>JVM内存模型</h2><p>根据 JVM 规范，JVM 内存共分为虚拟机栈、堆、方法区、程序计数器、本地方法栈五个部分。</p>
 <p><img src="jvm-model.png" alt="JVM模型"></p>
-<h3 id="1、虚拟机栈"><a href="#1、虚拟机栈" class="headerlink" title="1、虚拟机栈"></a>1、虚拟机栈</h3><p>每个线程有一个私有的栈，随着线程的创建而创建。栈里面存着的是一种叫“栈帧”的东西，每个方法会创建一个栈帧，栈帧中存放了局部变量表（基本数据类型和对象引用）、操作数栈、方法出口等信息。栈的大小可以固定也可以动态扩展。当栈调用深度大于JVM所允许的范围，会抛出StackOverflowError的错误，不过这个深度范围不是一个恒定的值。</p>
+<h3 id="1、虚拟机栈"><a href="#1、虚拟机栈" class="headerlink" title="1、虚拟机栈"></a>1、虚拟机栈</h3><p>每个线程有一个私有的栈，随着线程的创建而创建。栈里面存着的是一种叫“栈帧”的东西，每个方法会创建一个栈帧，栈帧中存放了局部变量表（基本数据类型和对象引用）、操作数栈、方法出口等信息。栈的大小可以固定也可以动态扩展。当栈调用深度大于JVM所允许的范围，会抛出StackOverflowError的错误，不过这个深度范围不是一个恒定的值。<br><a id="more"></a></p>
 <h3 id="2、本地方法栈"><a href="#2、本地方法栈" class="headerlink" title="2、本地方法栈"></a>2、本地方法栈</h3><p>这部分主要与虚拟机用到的 Native 方法相关，一般情况下， Java 应用程序员并不需要关心这部分的内容。</p>
 <h3 id="3、PC寄存器"><a href="#3、PC寄存器" class="headerlink" title="3、PC寄存器"></a>3、PC寄存器</h3><p>PC 寄存器，也叫程序计数器。JVM支持多个线程同时运行，每个线程都有自己的程序计数器。倘若当前执行的是 JVM 的方法，则该寄存器中保存当前执行指令的地址；倘若执行的是native 方法，则PC寄存器中为空。</p>
 <h3 id="4、堆"><a href="#4、堆" class="headerlink" title="4、堆"></a>4、堆</h3><p>堆内存是 JVM 所有线程共享的部分，在虚拟机启动的时候就已经创建。所有的对象和数组都在堆上进行分配。这部分空间可通过 GC 进行回收。当申请不到空间时会抛出 OutOfMemoryError。</p>
@@ -316,11 +316,6 @@
     </a>
   
   
-    <a href="/2017/01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
 </nav>
 
 
@@ -421,15 +416,15 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">netty</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">jvm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">netty</a>
               </li>
             
             <div class="clearfix"></div>
